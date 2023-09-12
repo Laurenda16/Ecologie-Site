@@ -168,6 +168,7 @@ border-radius: 50px;
 section
 {
 padding: 0 25px;
+margin: 100px;
 margin-bottom: 50px;
 }
 .title
@@ -223,6 +224,9 @@ margin-bottom: 10px;
 
 }
 /*a propos*/
+.about{
+    margin: 100px;
+}
 .list_about
 {
     
@@ -248,5 +252,33 @@ color: #79BC23;
 }
 .list_about .description p
 {
-    margin-left: 20px;
+    font-size: 15px;
+    color: #999 ;
 }
+
+/*******CONTACT***/
+
+.form-image
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-image form
+{
+   width: 35%;
+  display: flex;
+    flex-direction: column;
+}
+.form-image form input,textarea
+{
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 30px;
+  background-color: #f2f2f2;
+  border: 0;
+  outline: 0;
+  resize: none;/*textarea*/
+  width:100%;
+}
+
