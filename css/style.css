@@ -181,7 +181,7 @@ margin-bottom: 50px;
     margin-bottom: 30px;
 }
 
-.title::after
+.title::after /*le rond vert*/
 {
     content: " ";
     position: absolute;
@@ -192,6 +192,17 @@ margin-bottom: 50px;
     width: 30px;
     border-radius: 50%;
     background:linear-gradient(#349971,#79BC23);
+}
+.title::before /*le carre blanc*/
+{
+    content: " ";
+    position: absolute;
+    top: 32px;
+    left: -15px;
+    z-index: -1;
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
 }
 .small_title
 {
@@ -261,7 +272,7 @@ color: #79BC23;
 .form-image
 {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 .form-image form
@@ -281,4 +292,209 @@ color: #79BC23;
   resize: none;/*textarea*/
   width:100%;
 }
+.form_btn
+{
+   width: fit-content;/**mettre au tout debut*/
+   margin-top: 20px;
+}
+.image{
+    width: 65%;
+}
 
+.image img
+{
+    width: 100%;
+    object-fit: cover;/*ca prend toute la partie*/
+    border-radius: 30px;
+    margin-left: 50px;
+    height:450px; 
+}
+
+footer{
+    background-color: #4f4f4f;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+}
+.small_menu
+{
+    display: none;
+}
+/**les medias query Mobile Responsible*/
+@media (max-width:628px) {
+    .header .logo h1
+    {
+        font-size: 15px;
+
+    }
+    .header .logo img
+    {
+       width: 30px;
+       height: 30px;
+
+    }
+    header .Menu
+    {
+        display: none;
+    }
+    .number{
+        display: none;
+    }
+    .home
+    {
+        flex-direction: column-reverse;
+        height: fit-content;
+    }
+    .home .left, .home, .right
+    {
+    width: 100%;
+    }
+    .home .right
+    {
+    height: 350px;
+    }
+    .home .left
+    {
+   margin: 20px 0;
+    }
+    .home .left h1
+    {
+font-size: 60px;
+    }
+.home .left h4
+{
+font-size: 18px;
+}
+
+.home .left p
+{
+font-size: 11px;
+}
+
+.title
+{
+  font-size: 18px;  
+}
+.title::after
+{
+  font-size: 19px;  
+}
+.list_service , .serv
+{
+    width: 100%;
+    margin-bottom: 50px;
+}
+.list_about h1
+{
+font-size: 50px;
+}
+.list_about .description h3
+{
+font-size: 12px;
+}
+.list_about .description p
+{
+font-size: 10px;
+}
+.form-image .image
+{
+display: none;
+}
+
+.form-image form
+{
+width: 100%;
+}
+footer {
+    font-size: 10px
+
+}
+
+/**Responsive Menu**/
+.small_menu
+{
+    display:flex;
+    width: 25px;
+    height: 25px;
+    align-items: center;
+    justify-content: space-between;
+    overflow:hidden;
+    border-radius: 50%;
+    transition: 0.5s;
+
+}
+.small_menu span
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+
+.small_menu span div 
+
+{
+height: 11px;
+width: 11px;
+background-color: #53b758;
+border-radius: 6px;
+}
+.small_menu.active{
+    justify-content: center;
+    align-items: unset;
+
+}
+.small_menu.active span:nth-child(1)
+{
+display: none;
+}
+.small_menu.active span
+{
+display: flex;
+flex-direction: unset;
+height: 100%;
+align-items: center;
+justify-content: center;
+transition: 0.5s;
+}
+.small_menu.active span div
+{
+height: 100%;
+width: 3px;
+border-radius: 6px;
+transition: 0.5s;
+
+}
+/*les div de small menu rotation**/
+.small_menu.active span div:nth-child(1)
+{
+transform: rotate(45deg);
+
+}
+.small_menu.active span div:nth-child(2)
+{
+transform: rotate(-45deg);
+
+}
+
+header .menu.small
+{
+display: flex;
+position: absolute;
+top: 50px;
+left: 0;
+background-color: #349971;
+flex-direction: column;
+width: 100%;
+}
+header .menu.small li
+{
+margin: 15px 0;/****bloque****/
+
+}
+
+
+
+}
